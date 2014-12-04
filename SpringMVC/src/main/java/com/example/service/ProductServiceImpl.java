@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.example.dao.ProductDAO;
+import com.example.model.Distributor;
 import com.example.model.Product;
 
 /**
@@ -61,6 +62,12 @@ public class ProductServiceImpl implements ProductService {
 	@Override
 	public List<Product> getProducts() {
 		return productDAO.getProducts();
+	}
+
+	@Override
+	public void insertDistributor(Distributor distributor) {
+		productDAO.insertDistributor(distributor);
+		
 	}
 
 }

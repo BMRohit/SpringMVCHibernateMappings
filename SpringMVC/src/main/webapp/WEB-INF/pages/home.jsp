@@ -8,17 +8,20 @@
 <title>Home page</title>
 </head>
 <body>
-<h1>Welcome to Spring MVC Demo example</h1>
+<h1>Welcome!</h1>
 <p style="color: blue;">${message}<br/></p>
 
 <p>
+<a href="${pageContext.request.contextPath}/category/categorypage.html">Add new category</a><br/>
+<a href="${pageContext.request.contextPath}/category/listcategories.html">List all categories</a><br/>
 <a href="${pageContext.request.contextPath}/product/productpage.html">Add new product</a><br/>
 <a href="${pageContext.request.contextPath}/product/listofproducts.html">List all the products</a><br/>
+<a href="${pageContext.request.contextPath}/product/distributorpage.html">Add Distributor</a><br/>
 </p>
 
 
 <p>
-<h4>Technologies used in the project : Spring MVC, Hibernate, Maven, Log4j, Junit </h4>
+<!-- <h4>Technologies used in the project : Spring MVC, Hibernate, Maven, Log4j, Junit </h4> -->
 
 
 </p>

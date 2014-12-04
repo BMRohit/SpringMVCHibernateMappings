@@ -11,6 +11,7 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.example.model.Distributor;
 import com.example.model.Product;
 
 /**
@@ -97,6 +98,18 @@ public class ProductDAOImpl implements ProductDAO {
 			logger.error(" error while getting list of products",e);
 		}
 		return products;
+	}
+
+	@Override
+	public void insertDistributor(Distributor distributor) {
+		try{
+			getCurrentSession().save(distributor);
+			logger.info("Distributor inserted to database ");
+		}
+		catch(Exception e){
+			logger.error(" error while saving distributor "+distributor,e);
+		}
+		
 	}
 	
 	

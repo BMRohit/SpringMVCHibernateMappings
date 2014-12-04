@@ -5,6 +5,7 @@ package com.example.dao;
 
 import java.util.List;
 
+import com.example.model.Distributor;
 import com.example.model.Product;
 
 /**
@@ -18,5 +19,6 @@ public interface ProductDAO {
 	void updateProduct(Product product);
 	void deleteProduct(long productID);
 	List<Product> getProducts();
+	void insertDistributor(Distributor distributor);
 
 }
